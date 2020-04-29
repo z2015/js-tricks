@@ -1,0 +1,3 @@
+## Modal
+
+引用modal组件的父组件触发componentDidMount事件时，modal组件下的children未触发componenetDidMount。因为modal组件引用的rc-util/portal组件不是直接显示children，而是在portal触发componenetDidMount事件，动态执行props.getContainer方法，最终在显示children的。
